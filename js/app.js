@@ -13,16 +13,31 @@ function eventListeners(){
 
 
  //Clases
+class Presupuesto{
+    constructor(presupuesto){
+        this.presupuesto = Number(presupuesto);
+        this.restante = Number(presupuesto);
+        this.gastos = [];
+    }
+}
 
+class UserInterface{
 
+}
 
+//Instanciar 
+const UI = new UserInterface();
+let presupuesto;
  
  //Funciones
  function iniciarPresupuesto(){
     const presupuestoUsuario = prompt('¿Cúal es tu Presupuesto');
-   if(presupuestoUsuario === '' || presupuestoUsuario === null || isNaN(presupuestoUsuario) || presupuestoUsuario < 0){
-       window.location.reload();
-   }
+    if(presupuestoUsuario === '' || presupuestoUsuario === null || isNaN(presupuestoUsuario) || presupuestoUsuario <= 0){
+        window.location.reload();
+    }
+
+    //Presupuesto Válido
+    presupuesto = new Presupuesto(presupuestoUsuario);
    
-    console.log(presupuestoUsuario);
+    console.log(presupuesto);
  }
