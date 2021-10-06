@@ -205,3 +205,6 @@ function eliminarGasto(id){
 
     UI.comprobarPresupuesto(presupuesto);
 }
+
+const hola = new Hola();
+hola.saludar();
